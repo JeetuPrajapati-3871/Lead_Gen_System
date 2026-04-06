@@ -45,3 +45,34 @@ HUNTER_API_KEY = "your_api_key_here"
 
 # Local Docker database URL
 DATABASE_URL="postgresql://postgres:password@db:5432/leadgen_db"
+
+
+---
+
+## 🛠️ Future Enhancements & Roadmap
+
+To transform from a lead extraction tool into a high-conversion **Outreach Engine**, the following modules are currently under development:
+
+### 🤖 1. Local AI Copywriting (Ollama Integration)
+Instead of generic templates, use local LLMs to craft hyper-personalized messages.
+* **Contextual Drafting**: Integrate with **Ollama** (Llama 3 or Mistral) to analyze a lead's `position` and `company_name` to generate unique subject lines and email bodies.
+* **Privacy & Cost**: Processing happens locally on your machine, ensuring data privacy and zero per-message API costs.
+* **Multi-Tone Support**: Toggle between professional, casual, or "problem-solver" tones based on the target industry.
+
+### 📧 2. Automated Cold Outreach (SMTP)
+Move from downloading CSVs to hitting "Send" directly from the dashboard.
+* **Custom SMTP Configuration**: Support for adding multiple sender accounts (Gmail, Outlook, or private SMTP servers).
+* **Smart Throttling**: Built-in delays and daily sending limits to protect your domain reputation and stay under provider caps.
+* **Email Sequencing**: Set up automated follow-ups if a lead doesn't respond within a specific timeframe.
+
+### 📊 3. Advanced Tracking & Analytics
+Gain deep insights into how your leads are interacting with your emails.
+* **Seen Rate (Open Tracking)**: Implementation of a transparent 1x1 tracking pixel to monitor when and how many times an email is opened.
+* **Click-Through Rate (CTR)**: URL wrapping to track which links (calendly, portfolio, website) the lead clicks on.
+* **Bounce & Reply Detection**: Automatically flag "Dead" emails in the database and stop sequences once a lead replies.
+
+### 🗂️ 4. CRM-Style Lead Management
+* **Status Tags**: Label leads as `New`, `Contacted`, `Replied`, or `Converted` within the UI.
+* **Enriched Profiles**: Automatically pull LinkedIn profiles or company news to provide more "hooks" for the AI writer.
+
+---
